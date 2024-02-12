@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="<?php bloginfo('language'); ?>">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css?_v=20230608174734">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230608174734">
@@ -30,16 +31,15 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__container"><a href="/" class="header__logo logo">
-				<img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="logo">
-			</a>
+			<div class="header__container">
+				<?php the_custom_logo(); ?>
 				<nav class="header__menu menu">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="./service-page.html" class="menu__link">Послуги</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Про мене</a></li>
-						<li class="menu__item"><a href="./blog-page.html" class="menu__link">Блог</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Кейси</a></li>
-					</ul>
+					<?php wp_nav_menu( array(
+						'container' => false,
+						'menu_class' => 'menu__list',
+						'menu_item_class' => 'menu__item'
+					) ); ?>
+
 				</nav>
 				<div class="header__left"><button class="header-tell"><svg width="25" height="24" viewBox="0 0 25 24"
 							fill="none" xmlns="http://www.w3.org/2000/svg">

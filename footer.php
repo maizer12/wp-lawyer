@@ -2,8 +2,8 @@
 			<div class="footer__top">
 				<ul class="footer__container footer__columns">
 					<li class="footer-column">
-						<div class="footer-column__content"><a href="#" class="footer-logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="logo"
-									class="footer-logo__img"></a>
+						<div class="footer-column__content">
+							<?php the_custom_logo(); ?>
 							<div class="footer-column__address">
 								<address>вулиця Олександрівська, д.29,<br>Запоріжжя, Запорізька область, 69063</address>
 							</div>

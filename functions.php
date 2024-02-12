@@ -99,3 +99,15 @@
         }
     }
 }
+//menu
+add_action('init', function() {
+	add_theme_support('menus');
+	add_theme_support('custom-logo');
+} );
+
+add_action('after_setup_theme', function() {
+	register_nav_menus( [
+		'header_menu' => 'Меню в шапці',
+		'footer_menu' => 'Меню в футері'
+	] );
+});
